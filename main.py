@@ -1,5 +1,6 @@
 from functions import *
 from random import choices
+from playsound3 import playsound
 rows = get_dimentions("row")
 columns = get_dimentions("column")
 lr = columns if columns < rows else rows
@@ -14,13 +15,15 @@ colour_print(align("COMFY CAKES"), False, "256", layer = "fg", code = "153")
 colour_print("*"*columns+ '\n', False, "256", layer = "fg", code = "153")
 print()
 input("Press Enter to start the necessary checking: ")
+playsound(r".\media\music\PURBLE_BUTTON_STEREO.WMA", block=False)
 for name in files:
     check_conection(name)
 print()
 colour_print("Checking Complete", False, "plain", colour= "green", bold = False)
-
+playsound(r".\media\music\PURBLES_SHAKERBUTTON.WMA", block=False)
 print()
 difficulty= input(f"Select Difficulty level: \n{colour_print("", "code", "plain", colour="green", bold = True)}1. Easy{end_code()}\n{colour_print("", "code", "plain", colour="golden", bold = True)}2. Difficult{end_code()}\n{colour_print("", "code", "plain", colour="red", bold = True)}3. Asian{end_code()}\n: ")
+playsound(r".\media\music\PURBLES_CAKEBUTTONS.WMA", block=False)
 match difficulty.strip().lower():
     case "easy"|"1":
         difficulty = "easy"
@@ -28,7 +31,6 @@ match difficulty.strip().lower():
         difficulty = "difficult"
     case "asian":
         difficulty = "asian"
-
 with open("check_clock.txt", 'a', encoding="utf-8") as file:
     match difficulty.strip().lower():
         case "easy":
@@ -90,20 +92,27 @@ def bake():
         colour_print(": 'next' and 'previous'for next and previous menu respectively\n: 'undo' to undo\n: 'done' to finish and pack the cake\n", False, "plain", colour = "White", bold= True)
         match input("You response shall be: "):
             case "next"|"n":
+                playsound(r".\media\music\PURBLES_ROTATEBUTTON.WMA", block=False)
                 n = n+1 if n<3 else n-3
             case "previous"|"p":
+                playsound(r".\media\music\PURBLES_ROTATEBUTTON.WMA", block=False)
                 n = n-1 if n >-4 else n+4
             case "1":
+                playsound(r".\media\music\PURBLES_CAKEBUTTONS.WMA", block=False)
                 cake.append(options[tabs[n]][1])
             case "2":
+                playsound(r".\media\music\PURBLES_CAKEBUTTONS.WMA", block=False)
                 cake.append(options[tabs[n]][2])
             case "3":
+                playsound(r".\media\music\PURBLES_CAKEBUTTONS.WMA", block=False)
                 cake.append(options[tabs[n]][3])
             case "undo"|"u":
+                playsound(r".\media\music\PURBLE_BUTTON_STEREO.WMA", block=False)
                 cake.pop()
-                undo = True
             case "done"|"d":
+                playsound(r".\media\music\PURBLES_SHAKERBUTTON.WMA", block=False)
                 return cake
+            
         if tabs[n] in ["icing", "decor"] and len(cake)>size:
             cake.insert(size, tabs[n])
         print(cake)
@@ -123,7 +132,6 @@ def bake():
             file.write(b_message)
             file.flush()
         print(b_message)
-            
         size = len(cake)
 
 print("\033[2J\033[1;1H")
@@ -148,7 +156,7 @@ for n in range(cakes_n):
 
     print(message.replace("`", "\n"))         
     input("Take a gooood looong loook and press enter: ")
-
+    playsound(r".\media\music\PURBLE_BUTTON_STEREO.WMA", block=False)
     package = bake()
     order = sum(cakes_discription[list[n]][1:], [])
     print("\033[2J\033[1;1H")
@@ -156,15 +164,18 @@ for n in range(cakes_n):
         for i in package:
             order.remove(i)
     except Exception:
+        playsound(r".\media\music\PURBLES_GENERALFAILURE.WMA", block=False)
         with open("check_score.txt", 'a', encoding="utf-8") as file:
             file.write("-\n")
         colour_print("One job bro, ONE JOB!!", False, "plain", colour = "red", bold = True)
     else:
         if not any(order):
+            playsound(r".\media\music\WIN.WMA", block=False)
             with open("check_score.txt", 'a', encoding="utf-8") as file:    
                 file.write("+\n")
             colour_print("Good Job", False, "plain", colour = "Green", bold = True)
         else:
+            playsound(r".\media\music\PURBLES_GENERALFAILURE.WMA", block=False)
             with open("check_score.txt", 'a', encoding="utf-8") as file:
                 file.write("-\n")
             colour_print("One job bro, ONE JOB!!", False, "plain", colour = "red", bold = True)
