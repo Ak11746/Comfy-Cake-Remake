@@ -1,14 +1,13 @@
 ![made-with-python](https://img.shields.io/badge/Made%20with-Python3-brightgreen)
 
-<br />
-<h1>
-<p align="center">
+<h1 align="center", >
   <img src=media/logo.png alt="Logo" width="220" height="220">
-  <br>
+  
+   Comfy Cake 
 </h1>
   <p align="center">
     A recreation of a game most of us grew up with <b>Purble Place: Comfy Cake</b>.
-    <br />
+    <br>
     </p>
 </p>
 <p align="center">
@@ -16,7 +15,7 @@
   <a href="#dependencies">Dependencies</a> •
   <a href="#downloading">Downl oading</a> •
   <a href="#usage">How To Use</a> •
-  <a href="#credits">Credits</a> 
+  <a href="#credits-and-comments">Credits and Comments</a> 
 </p>  
 
                                                               
@@ -28,13 +27,14 @@
 The code depends upon the following external libraries in adition to the basic python libraries:
 - keyboard : `pip install keyboard`
 - prettytable : `pip install prettytable`
+- playsound3 : `pip install playsound3`
 >**Important:**
 > Absence of these dependencies will create random errors.
 
 
 ## Downloading
 
-Download from GitHub:
+Download using git:
 ```py
 git https://github.com/Ak11746/Comfy-Cake-Remake.git
 ```
@@ -47,21 +47,20 @@ git https://github.com/Ak11746/Comfy-Cake-Remake.git
   <br> 
 </p>
 
+
+> **Usage:**
+> Follow the exact order of initialising.                                                 
+  <img src=media/Rec.gif alt="Gif" >
+
 > Some other screenshoots
 <p>                                                          
   <img src=media/ss2.png alt="Screenshot" >
   <img src=media/ss4.png alt="Screenshot" >
   <br> 
 </p>
+                                                                                      
 
-> Usage:
-<p>                                                          
-  <video src=media/Rec.gif alt="Gif" >
-  <br> 
-</p>
-                                                                                         
-
-## Credits
+## Credits and Comments
 - Credit to [L0garithmic](https://github.com/L0garithmic/FastColabCopy) for this awesome readme template.   
 
-- > **No AI has been used in this project.**
+- ****AI FREE PROJECT****
