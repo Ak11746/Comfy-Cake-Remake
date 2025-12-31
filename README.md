@@ -36,8 +36,7 @@ The code depends upon the following external libraries in adition to the basic p
 
 Download from GitHub:
 ```py
-!wget https://raw.githubusercontent.com/L0garithmic/fastcolabcopy/main/fastcopy.py
-import fastcopy
+!wget https://github.com/Ak11746/Comfy-Cake-Remake.git
 ```
 
 
