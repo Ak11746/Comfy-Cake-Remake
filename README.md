@@ -42,23 +42,22 @@ import fastcopy
 
 
 ## Usage
-
+> Arrange the terminals like this for optimal workflow             
 <p>                                                          
   <img src=media/ss1.png alt="Arrangement" >                                           
   <br> 
 </p>
-
-> Arrange the terminals like this for optimal workflow             
-
+\
+> Some other screenshoots
 <p>                                                          
   <img src=media/ss2.png alt="Screenshot" >
   <img src=media/ss4.png alt="Screenshot" >
   <br> 
 </p>
-
-> Some other screen shoots
+\
+> Usage:
 <p>                                                          
-  <video src=media/rec.mp4 alt="Screenshot" >
+  <video src=media/Rec.gif alt="Gif" >
   <br> 
 </p>
                                                                                          
