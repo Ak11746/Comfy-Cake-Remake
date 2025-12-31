@@ -36,7 +36,7 @@ The code depends upon the following external libraries in adition to the basic p
 
 Download from GitHub:
 ```py
-!wget https://github.com/Ak11746/Comfy-Cake-Remake.git
+git https://github.com/Ak11746/Comfy-Cake-Remake.git
 ```
 
 
