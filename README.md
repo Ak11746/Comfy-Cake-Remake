@@ -47,14 +47,14 @@ import fastcopy
   <img src=media/ss1.png alt="Arrangement" >                                           
   <br> 
 </p>
-\
+
 > Some other screenshoots
 <p>                                                          
   <img src=media/ss2.png alt="Screenshot" >
   <img src=media/ss4.png alt="Screenshot" >
   <br> 
 </p>
-\
+
 > Usage:
 <p>                                                          
   <video src=media/Rec.gif alt="Gif" >
