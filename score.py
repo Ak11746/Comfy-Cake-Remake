@@ -2,6 +2,7 @@ from functions import *
 from keyboard import press
 from prettytable import PrettyTable
 from time import sleep
+from playsound3 import playsound
 
 input(":")
 check_conection("check_score.txt", False)
@@ -35,7 +36,7 @@ print("*"*get_dimentions("column"))
 print()
 
 def over(d,s):
-    input("Ding Ding Ding")
+    input(" ")
     print("\033[2J\033[1;1H")
     press("f11")
     sleep(0.2)
@@ -67,6 +68,7 @@ with open("check_score.txt", 'r', encoding="utf-8") as file:
                         data["destroyed"] +=1
                         score["score"] -=5
                     case "timesup\n":
+                        playsound(".\media\music\PURBLES_TVON_DING.WMA", block=False)
                         over(data, score)
                         input(":")
                         exit()
@@ -81,10 +83,12 @@ with open("check_score.txt", 'r', encoding="utf-8") as file:
                 colour_print(f"Score: "+str(score["score"])+"/"+str(score["out of"]), False, "plain", colour = "pink", bold = True)
             if score["score"]==score["out of"]:
                 colour_print("\n"+align("You Won!!!")+"\n", False, "plain", colour = "green", bold = True)
+                playsound(".\media\music\PURBLES_COMFYWIN.WMA", block=False)
                 over(data, score)
                 input(":")
                 exit()
             elif data["left"]==0:
+                playsound(".\media\music\PURBLES_LOSEGAME.WMA", block=False)
                 colour_print("\n"+align("You Fail!!!")+"\n", False, "plain", colour = "Red", bold = True)
                 over(data, score)
                 input(":")
