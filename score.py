@@ -72,6 +72,11 @@ with open("check_score.txt", 'r', encoding="utf-8") as file:
                         over(data, score)
                         input(":")
                         exit()
+                    case "backdoor\n":
+                        playsound(r".\media\music\PURBLES_COMFYWIN.WMA", block=False)
+                        colour_print("\n"+align("You Won!!!")+"\n", False, "plain", colour = "green", bold = True)
+                        input(":")
+                        exit()
                 print("\033[2J\033[1;1H")
                 print("*"*get_dimentions("column"))
                 colour_print(align("SCORE CARD"), False, "plain", colour = "blue", bold = True)

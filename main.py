@@ -54,22 +54,34 @@ with open("check_score.txt", 'a', encoding="utf-8") as file:
 
 starter(files)
 
-cakes = [0,1,2,3,4,5]
+cakes = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
 cakes_discription = {
     0: [1, ["heart", "chocolate"]],
-    1: [2, ["circle", "chocolate"], ["icing", "vanila"]],
-    2: [3, ["rectangle", "chocolate"], ["circle", "strawberry"], ["icing", "vanila"]],
-    3: [4, ["circle", "vanila"], ["heart", "chocolate"], ["icing", "vanila"], ["decor", "sprinkles"]],
-    4: [5, ["rectangle", "vanila"], ["circle", "chocolate"], ["heart", "strawberry"], ["icing", "vanila"], ["decor", "ganache"]],
-    5: [6, ["rectangle", "vanila"], ["icing", "chocolate"], ["circle", "chocolate"], ["icing", "strawberry"], ["circle", "strawberry"], ["icing", "vanila"], ["decor", "ganache"], ["decor", "marzipan"]],
+    1: [1, ["rectangle", "chocolate"]],
+    2: [1, ["rectangle", "vanila"]],
+    3: [2, ["circle", "chocolate"], ["icing", "vanila"]],
+    4: [2, ["circle", "strawberry"], ["decor", "sprinkles"]],
+    5: [2, ["circle", "vanila"], ["icing", "vanila"]],
+    6: [3, ["rectangle", "chocolate"], ["circle", "strawberry"], ["icing", "vanila"]],
+    7: [3, ["rectangle", "vanila"], ["heart", "vanila"], ["decor", "sprinkles"]],
+    8: [3, ["rectangle", "strawberry"], ["rectangle", "chocolate"], ["icing", "strawberry"]],
+    9: [4, ["circle", "vanila"], ["heart", "chocolate"], ["icing", "strawberry"], ["decor", "sprinkles"]],
+    10: [4, ["rectangle", "strawberry"], ["heart", "chocolate"], ["icing", "vanila"], ["decor", "ganache"]],
+    11: [4, ["heart", "vanila"], ["circle", "strawberry"], ["icing", "chocolate"], ["decor", "marzipan"]],
+    12: [5, ["rectangle", "vanila"], ["circle", "chocolate"], ["heart", "strawberry"], ["icing", "vanila"], ["decor", "ganache"]],
+    13: [5, ["rectangle", "strawberry"], ["circle", "vanila"], ["heart", "strawberry"], ["icing", "chocolate"], ["decor", "sprinkles"]],
+    14: [5, ["rectangle", "chocolate"], ["circle", "strawberry"], ["heart", "vanila"], ["icing", "strawberry"], ["decor", "marzipan"]],
+    15: [6, ["rectangle", "vanila"], ["icing", "chocolate"], ["circle", "chocolate"], ["icing", "strawberry"], ["circle", "strawberry"], ["icing", "vanila"], ["decor", "ganache"], ["decor", "marzipan"]],
+    16: [6, ["circle", "chocolate"], ["icing", "vanila"], ["heart", "strawberry"], ["icing", "vanila"], ["rectangle", "vanila"], ["icing", "strawberry"], ["decor", "sprinkles"], ["decor", "ganache"]],
+    17: [6, ["heart", "strawberry"], ["icing", "chocolate"], ["rectangle", "vanila"], ["icing", "chocolate"], ["heart", "chocolate"], ["icing", "chocolate"], ["decor", "marzipan"], ["decor", "sprinkles"]],
 }
 match difficulty.strip().lower():
     case "easy":
-        weights = [0.4, 0.5, 0.05, 0.05, 0, 0]
+        weights = [10,10,10,20,20,20,10,10,10,1,1,1,1,1,1,1,1,1]
     case "difficult":
-        weights = [0.05, 0.05, 0.4, 0.4, 0.05, 0.05]
+        weights = [1,1,1,1,1,1,5,5,5,20,20,20,10,10,10,5,5,5]
     case "asian":
-        weights = [0.01, 0.01, 0.04, 0.04, 0.45, 0.45]
+        weights = [1,1,1,1,1,1,5,5,5,5,5,5,10,10,10,20,20,20]
 list = []
 for _ in range(cakes_n):
     list.append(choices(cakes, weights)[0])
@@ -90,7 +102,7 @@ def bake():
         print(colour_print("Current Active Tab: @"+tabs[n], True, "plain", colour = "White", bold= False).replace("@", end_code()+colour_print("", "code", "plain", colour = "White", bold = True)))
         print(colour_print("Available Options (Enter the resp. code):\n@"+options[tabs[n]][0], True, "plain", colour = "White", bold= False).replace("@", end_code()+colour_print("", "code", "plain", colour = "White", bold = True)))
         colour_print(": 'next' and 'previous'for next and previous menu respectively\n: 'undo' to undo\n: 'done' to finish and pack the cake\n", False, "plain", colour = "White", bold= True)
-        match input("You response shall be: "):
+        match input("You response shall be: ").lower():
             case "next"|"n":
                 playsound(r".\media\music\PURBLES_ROTATEBUTTON.WMA", block=False)
                 n = n+1 if n<3 else n-3
@@ -112,6 +124,10 @@ def bake():
             case "done"|"d":
                 playsound(r".\media\music\PURBLES_SHAKERBUTTON.WMA", block=False)
                 return cake
+            case "lord hear our prayer":
+                playsound(r".\media\music\PURBLES_SHAKERBUTTON.WMA", block=False)
+                win = False
+                return win
             
         if tabs[n] in ["icing", "decor"] and len(cake)>size:
             cake.insert(size, tabs[n])
@@ -158,6 +174,12 @@ for n in range(cakes_n):
     input("Take a gooood looong loook and press enter: ")
     playsound(r".\media\music\PURBLE_BUTTON_STEREO.WMA", block=False)
     package = bake()
+    if str(type(package)) == "<class 'bool'>" and package:
+        playsound(r".\media\music\WIN.WMA", block=False)
+        with open("check_score.txt", 'a', encoding="utf-8") as file:
+            file.write("backdoor\n")
+        input(":")
+        quit()
     order = sum(cakes_discription[list[n]][1:], [])
     print("\033[2J\033[1;1H")
     try:
@@ -183,6 +205,6 @@ for n in range(cakes_n):
     print("\033[2J\033[1;1H")
 
 input(":")
-
+quit()
 
             
