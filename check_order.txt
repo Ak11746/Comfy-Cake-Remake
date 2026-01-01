@@ -1,3 +1,1 @@
-[1;94mOrder 1:[00m`[0;96mNo of layers: [00m[1;96m1[00m`[0;96mlayer: [00m[1;96mheart[00m[0;96m and flavour/type: [00m[1;96mchocolate[00m[0;96m[00m`
-[1;94mOrder 2:[00m`[0;96mNo of layers: [00m[1;96m1[00m`[0;96mlayer: [00m[1;96mheart[00m[0;96m and flavour/type: [00m[1;96mchocolate[00m[0;96m[00m`
-[1;94mOrder 3:[00m`[0;96mNo of layers: [00m[1;96m1[00m`[0;96mlayer: [00m[1;96mheart[00m[0;96m and flavour/type: [00m[1;96mchocolate[00m[0;96m[00m`
+
