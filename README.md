@@ -1,4 +1,5 @@
 ![made-with-python](https://img.shields.io/badge/Made%20with-Python3-brightgreen)
+![0% Vibe Coded](https://img.shields.io/badge/0%25-Vibe%20Coded-$ff69b4?style=flat&logo=openai&logoColor=white)
 
 <h1 align="center", >
   <img src=media/logo.png alt="Logo" width="220" height="220">
@@ -15,7 +16,7 @@
   <a href="#dependencies">Dependencies</a> •
   <a href="#downloading">Downl oading</a> •
   <a href="#usage">How To Use</a> •
-  <a href="#credits-and-comments">Credits and Comments</a> 
+  <a href="#credits">Credits</a> 
 </p>  
 
                                                               
@@ -60,7 +61,5 @@ git https://github.com/Ak11746/Comfy-Cake-Remake.git
 </p>
                                                                                       
 
-## Credits and Comments
+## Credits
 - Credit to [L0garithmic](https://github.com/L0garithmic/FastColabCopy) for this awesome readme template.   
-
-- ****AI FREE PROJECT****
