@@ -15,10 +15,6 @@ while True:
         case "1":
             colour_print("Comfy Cake Remake Selected", False, "plain", colour="green", bold=True)
             system('python main.py')
-            system('python orders.py')
-            system('python progress.py')
-            system('python clock.py')
-            system('python score.py')
             sleep(1)
             exit()
         case "2":
