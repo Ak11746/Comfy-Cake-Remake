@@ -87,7 +87,7 @@ for _ in range(cakes_n):
     list.append(choices(cakes, weights)[0])
 
 def bake():
-    print("\033[2J\033[1;1H")
+    clear()
     cake = []
     tabs = ["layer", "flavour", "icing", "decor"]
     options ={
@@ -98,7 +98,7 @@ def bake():
     }
     n = size = 0
     while True:
-        print("\033[2J\033[1;1H")
+        clear()
         print(colour_print("Current Active Tab: @"+tabs[n], True, "plain", colour = "White", bold= False).replace("@", end_code()+colour_print("", "code", "plain", colour = "White", bold = True)))
         print(colour_print("Available Options (Enter the resp. code):\n@"+options[tabs[n]][0], True, "plain", colour = "White", bold= False).replace("@", end_code()+colour_print("", "code", "plain", colour = "White", bold = True)))
         colour_print(": 'next' and 'previous'for next and previous menu respectively\n: 'undo' to undo\n: 'done' to finish and pack the cake\n", False, "plain", colour = "White", bold= True)
@@ -150,7 +150,7 @@ def bake():
         print(b_message)
         size = len(cake)
 
-print("\033[2J\033[1;1H")
+clear()
 
 for n in range(cakes_n):
     message = colour_print(f"Order {n+1}:", True, "plain", colour = "blue", bold = True)
@@ -181,7 +181,7 @@ for n in range(cakes_n):
         input(":")
         quit()
     order = sum(cakes_discription[list[n]][1:], [])
-    print("\033[2J\033[1;1H")
+    clear()
     try:
         for i in package:
             order.remove(i)
@@ -202,7 +202,7 @@ for n in range(cakes_n):
                 file.write("-\n")
             colour_print("One job bro, ONE JOB!!", False, "plain", colour = "red", bold = True)
     input("Next: ")
-    print("\033[2J\033[1;1H")
+    clear()
 
 input(":")
 quit()

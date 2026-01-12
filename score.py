@@ -29,7 +29,7 @@ with open("check_score.txt", 'r', encoding="utf-8") as file:
         break
 
 start("check_score.txt")
-print("\033[2J\033[1;1H")
+clear()
 print("*"*get_dimentions("column"))
 colour_print(align("SCORE CARD"), False, "plain", colour = "blue", bold = True)
 print("*"*get_dimentions("column"))
@@ -37,7 +37,7 @@ print()
 
 def over(d,s):
     input(" ")
-    print("\033[2J\033[1;1H")
+    clear()
     press("f11")
     sleep(0.2)
     print("*"*get_dimentions("column"))
@@ -77,7 +77,7 @@ with open("check_score.txt", 'r', encoding="utf-8") as file:
                         colour_print("\n"+align("You Won!!!")+"\n", False, "plain", colour = "green", bold = True)
                         input(":")
                         exit()
-                print("\033[2J\033[1;1H")
+                clear()
                 print("*"*get_dimentions("column"))
                 colour_print(align("SCORE CARD"), False, "plain", colour = "blue", bold = True)
                 print("*"*get_dimentions("column"))

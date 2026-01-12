@@ -21,7 +21,7 @@ with open("check_clock.txt", 'r', encoding="utf-8") as file:
         break
 
 start("check_clock.txt")
-print("\033[2J\033[1;1H")
+clear()
 sec = 00
 over = False
 faces = {
@@ -71,7 +71,7 @@ while not over:
             file.write("OVER\n")
         over = True
     sleep(1)
-    print("\033[2J\033[1;1H")
+    clear()
 else:
     with open("check_score.txt", 'a', encoding="utf-8") as lr:
         lr.write("timesup\n")

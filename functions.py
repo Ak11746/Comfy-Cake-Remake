@@ -11,9 +11,12 @@ def get_dimentions(type: str = "both"):
         case "both":
             return column, row
 
-def clear(name:str):
-    with open(name, 'w'):
-        pass
+def clear(name:str = False):
+    if name:
+        with open(name, 'w'):
+            pass
+    else:
+        print("\033[2J\033[1;1H")
 
 def check_conection(name:str, writing: bool= True, question: str= f'Connected Commarade?\n', answer: str = f"aai_aai captain\n"):
     if writing:
