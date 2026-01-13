@@ -1,6 +1,8 @@
-from os import system
+from os import getcwd
+from subprocess import call
 from time import sleep
 from functions import *
+path = getcwd()
 input(":")
 while True:
     clear()
@@ -14,7 +16,11 @@ while True:
     match input(": "):
         case "1":
             colour_print("Comfy Cake Remake Selected", False, "plain", colour="green", bold=True)
-            system('python main.py')
+            call(f'start /wait python {path}/main.py', shell=True)
+            call(f'start /wait python {path}/orders.py', shell=True)
+            call(f'start /wait python {path}/progress.py', shell=True)
+            call(f'start /wait python {path}/score.py', shell=True)
+            call(f'start /wait python {path}/clock.py', shell=True)
             sleep(1)
             exit()
         case "2":
