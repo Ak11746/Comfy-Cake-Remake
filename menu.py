@@ -1,4 +1,4 @@
-from os import getcwd
+from os import *
 from subprocess import call
 from time import sleep
 from functions import *
