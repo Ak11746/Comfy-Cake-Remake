@@ -51,8 +51,8 @@ git https://github.com/Ak11746/Comfy-Cake-Remake.git
 
 > **Usage:**
 > Follow the exact order of initialising.                                                 
-  <img src=media/Rec.gif alt="Gif" >
-
+<p> <img src=media/Rec.gif alt="Gif" >
+</p>
 > Some other screenshoots
 <p>                                                          
   <img src=media/ss2.png alt="Screenshot" >

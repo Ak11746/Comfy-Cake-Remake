@@ -9,7 +9,6 @@ files = ["check_clock.txt", "check_score.txt", "check_progress.txt", "check_orde
 
 for name in files:
     clear(name)
-
 colour_print("\n"+"*"*columns, False, "256", layer = "fg", code = "153")
 colour_print(align("COMFY CAKES"), False, "256", layer = "fg", code = "153")
 colour_print("*"*columns+ '\n', False, "256", layer = "fg", code = "153")
